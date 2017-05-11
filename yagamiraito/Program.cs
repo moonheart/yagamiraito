@@ -13,6 +13,7 @@ namespace yagamiraito
         public static void Main(string[] args)
         {
             var config = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
                 .AddCommandLine(args)
                 .Build();
 
