@@ -21,7 +21,7 @@ namespace yagamiraito
                 .UseKestrel()
                 .UseConfiguration(config)
                 .UseContentRoot(Directory.GetCurrentDirectory())
-                .UseUrls("http://127.0.0.1:4567")
+                .UseUrls("http://0.0.0.0:4567")
                 .UseStartup<Startup>()
                 .Build();
 
