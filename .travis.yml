@@ -1,9 +1,9 @@
 ﻿language: csharp
+sudo: false
 dist: trusty
-sudo: required
-mono: none
-dotnet:1.0.4
 
+os:
+  - linux
 script:
   - which dotnet
   - dotnet restore
