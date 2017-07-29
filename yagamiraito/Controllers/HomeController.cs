@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using yagamiraito.Dal;
 
 namespace yagamiraito.Controllers
 {
@@ -10,7 +11,10 @@ namespace yagamiraito.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            using (var db = new YagamiDbContext())
+            {
+                return View(db.Products.ToList());
+            }
         }
 
         public IActionResult About()
