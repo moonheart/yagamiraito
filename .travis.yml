@@ -1,7 +1,9 @@
-﻿language:csharp
+﻿language: csharp
+dist: trusty
+sudo: required
 mono: none
 dotnet:1.0.4
-dist: trusty
+
 script:
   - which dotnet
   - dotnet restore
