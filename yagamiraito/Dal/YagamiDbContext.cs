@@ -9,23 +9,9 @@ namespace yagamiraito.Dal
 {
     public class YagamiDbContext : DbContext
     {
-        public YagamiDbContext():base(GetDbContextOptions())
-        {
-        }
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
 
-        }
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-        }
-
-        private static DbContextOptions GetDbContextOptions()
-        {
-            var conf = new DbContextOptions<YagamiDbContext>();
-            return conf;
-        }
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) =>
+            optionsBuilder.UseMySql("Server=45.76.54.192;database=yagami;uid=root;pwd=maria@fzp;");
 
         public DbSet<Product> Products { get; set; }
     }
