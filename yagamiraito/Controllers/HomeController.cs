@@ -11,23 +11,6 @@ namespace yagamiraito.Controllers
     {
         public IActionResult Index()
         {
-            using (var db = new YagamiDbContext())
-            {
-                return View(db.Products.ToList());
-            }
-        }
-
-        public IActionResult About()
-        {
-            ViewData["Message"] = "Your application description page.";
-
-            return View();
-        }
-
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
-
             return View();
         }
 
